@@ -1,145 +1,280 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yiwei "Wayne" Ge</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f8f8f8; color: #222; }
-    header { background: white; padding: 20px 40px; border-bottom: 1px solid #ddd; position: sticky; top: 0; }
-    nav a { margin-right: 15px; text-decoration: none; color: #333; font-size: 14px; }
-    nav a:hover { text-decoration: underline; }
-    main { max-width: 900px; margin: auto; padding: 30px; }
-    section { margin-bottom: 50px; }
-    h1 { font-size: 36px; margin-bottom: 10px; }
-    h2 { border-bottom: 2px solid #eee; padding-bottom: 5px; }
-    .card { background: white; padding: 20px; border-radius: 10px; margin-top: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    ul { padding-left: 20px; }
-    li { margin-bottom: 8px; }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Personal academic website for Yiwei (Wayne) Ge, a mathematician working in combinatorics, matroid theory, and graph theory."
+    />
+    <title>Yiwei (Wayne) Ge | Mathematics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Yiwei Wayne Ge home">Yiwei (Wayne) Ge</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-<header>
-  <strong>Yiwei “Wayne” Ge</strong><br>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#talks">Talks</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#service">Service</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <main id="top">
+      <section class="hero" aria-labelledby="intro-title">
+        <img
+          class="hero-photo"
+          src="profile-photo.png"
+          alt="Yiwei (Wayne) Ge"
+        />
+        <div class="hero-copy">
+          <p class="eyebrow">Mathematics / Combinatorics</p>
+          <h1 id="intro-title">Yiwei (Wayne) Ge</h1>
+          <p class="lead">
+            Combinatorics, matroid theory, and graph theory.
+          </p>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="button primary" href="#publications">View Publications</a>
+            <a class="button secondary" href="Ge_CV.pdf">Download CV</a>
+          </div>
+        </div>
+      </section>
 
-<main>
+      <section class="section intro-grid" aria-label="Academic profile summary">
+        <article>
+          <h2>About</h2>
+          <p>
+            I received my Ph.D. in Mathematics from Louisiana State University
+            in May 2026, supervised by
+            <a href="https://www.math.lsu.edu/~oxley/">James Oxley</a>. My
+            dissertation is
+            <a href="https://repository.lsu.edu/gradschool_dissertations/7057/">
+              <em>Extremal Connectivity in Graphs and Matroids</em></a>.
+            My research interests include structural and extremal problems in
+            graphs and matroids.
+          </p>
+        </article>
+        <aside class="quick-info" aria-label="Quick information">
+          <dl>
+            <div>
+              <dt>Research</dt>
+              <dd>Combinatorics, matroid theory, graph theory</dd>
+            </div>
+            <div>
+              <dt>Advisor</dt>
+              <dd><a href="https://www.math.lsu.edu/~oxley/">James Oxley</a></dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd>
+                <a class="email-link" href="#" data-user="waynege96" data-domain="gmail.com">Personal email</a>
+                <span class="email-separator">/</span>
+                <a class="email-link" href="#" data-user="yge4" data-domain="lsu.edu">LSU email</a>
+              </dd>
+            </div>
+            <div>
+              <dt>CV</dt>
+              <dd><a href="Ge_CV.pdf">Download PDF</a></dd>
+            </div>
+            <div>
+              <dt>Dissertation</dt>
+              <dd>
+                <a href="https://repository.lsu.edu/gradschool_dissertations/7057/">
+                  LSU Repository</a>
+              </dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
 
-<section id="about">
-  <h1>Yiwei “Wayne” Ge</h1>
-  <p>Ph.D. Candidate in Mathematics, Louisiana State University<br>
-  Advisor: James Oxley</p>
+      <section class="section" id="publications" aria-labelledby="publications-title">
+        <div class="section-heading with-controls">
+          <div>
+            <p class="eyebrow">Publications</p>
+            <h2 id="publications-title">Selected Work</h2>
+          </div>
+          <div class="filters" aria-label="Publication filters">
+            <button class="filter active" type="button" data-filter="all">All</button>
+            <button class="filter" type="button" data-filter="preprint">Preprints</button>
+            <button class="filter" type="button" data-filter="article">Publications</button>
+          </div>
+        </div>
 
-  <div class="card">
-    <p>I work in structural and extremal combinatorics, focusing on graph theory and matroid theory. My research studies connectivity, extremal density, and unavoidable substructures in graphs and matroids, with additional interest in Ramsey-theoretic methods.</p>
-  </div>
-</section>
+        <ol class="publication-list">
+          <li class="publication" data-type="preprint">
+            <p class="pub-meta">2026 / Preprint</p>
+            <h3>Super-minimally k-connected matroids</h3>
+            <p>(with J. Oxley) Submitted.</p>
+            <a href="https://arxiv.org/abs/2603.11318">arXiv</a>
+          </li>
+          <li class="publication" data-type="preprint">
+            <p class="pub-meta">2025 / Preprint</p>
+            <h3>Reconstruction of C4-free graphs from closed neighborhoods</h3>
+            <p>
+              (with S. Borgwardt, M. Carr, C. Chen, S. G. Hartke, Y. Huang,
+              and A. Moon) Submitted.
+            </p>
+            <a href="https://arxiv.org/abs/2510.21195">arXiv</a>
+          </li>
+          <li class="publication" data-type="preprint">
+            <p class="pub-meta">2025 / Preprint</p>
+            <h3>Super-minimally 3-connected graphs</h3>
+            <p>Submitted.</p>
+            <a href="https://arxiv.org/abs/2510.06392">arXiv</a>
+          </li>
+          <li class="publication" data-type="preprint">
+            <p class="pub-meta">2025 / Preprint</p>
+            <h3>Rainbow triangles and the Erdos-Hajnal problem in projective geometries</h3>
+            <p>
+              (with C. Chun, J. D. Douthitt, T. Huynh, M. E. Kroeker, and
+              P. Nelson) Submitted.
+            </p>
+            <a href="https://arxiv.org/abs/2505.13781">arXiv</a>
+          </li>
+          <li class="publication" data-type="article">
+            <p class="pub-meta">2026 / Publication</p>
+            <h3>Unavoidable cycle-contraction minors of large 2-connected graphs</h3>
+            <p>
+              (with J. Oxley) <em>SIAM Journal on Discrete Mathematics</em>,
+              2026.
+            </p>
+            <a href="https://arxiv.org/abs/2503.20106">arXiv</a>
+          </li>
+          <li class="publication" data-type="article">
+            <p class="pub-meta">2025 / Publication</p>
+            <h3>On the oriented diameter of near planar triangulations</h3>
+            <p>(with X. Liu and Z. Wang) <em>Discrete Mathematics</em>, 2025.</p>
+            <a href="https://arxiv.org/abs/2312.03258">arXiv</a>
+          </li>
+          <li class="publication" data-type="article">
+            <p class="pub-meta">2025 / Publication</p>
+            <h3>The algebraic structure of hyperbolic graph braid groups</h3>
+            <p>
+              (with B. Appiah, P. Dani, C. Hudson, S. Jain, M. Lemoine,
+              J. Murphy, J. Murray, A. Pandikkadan, K. Schreve, and H. Vo)
+              <em>IJAC</em>, 2025.
+            </p>
+            <a href="https://arxiv.org/abs/2403.08623">arXiv</a>
+          </li>
+        </ol>
+      </section>
 
-<section id="research">
-  <h2>Research</h2>
-  <div class="card">
-    <ul>
-      <li>Structural and extremal graph theory</li>
-      <li>Matroid theory and connectivity</li>
-      <li>Super-minimally connected structures</li>
-      <li>Ramsey-type problems</li>
-    </ul>
-  </div>
-</section>
+      <section class="section" id="talks" aria-labelledby="talks-title">
+        <div class="section-heading">
+          <p class="eyebrow">Talks</p>
+          <h2 id="talks-title">Selected Presentations</h2>
+        </div>
+        <ol class="publication-list">
+          <li class="publication">
+            <p class="pub-meta">2026 / Defense</p>
+            <h3>Extremal Connectivity in Graphs and Matroids</h3>
+            <p>Ph.D. dissertation defense, LSU.</p>
+          </li>
+          <li class="publication">
+            <p class="pub-meta">2026 / Seminar</p>
+            <h3>Super-minimally 3-connected graphs</h3>
+            <p>LSU Combinatorics Seminar.</p>
+          </li>
+          <li class="publication">
+            <p class="pub-meta">2025 / Conference</p>
+            <h3>Unavoidable cycle-contraction minors of large 2-connected graphs</h3>
+            <p>AMS Southeastern Sectional Meeting, Clemson, SC.</p>
+          </li>
+          <li class="publication">
+            <p class="pub-meta">2025 / Seminar</p>
+            <h3>Unavoidable cycle-contraction minors of large 2-connected graphs</h3>
+            <p>LSU Combinatorics Seminar.</p>
+          </li>
+          <li class="publication">
+            <p class="pub-meta">2024 / Conference</p>
+            <h3>Oriented diameter of near planar triangulations</h3>
+            <p>CombinaTexas, College Station, TX.</p>
+          </li>
+          <li class="publication">
+            <p class="pub-meta">2024 / Seminar</p>
+            <h3>Reconstruction of C4-free graphs from closed neighborhoods</h3>
+            <p>LSU Combinatorics Seminar.</p>
+          </li>
+          <li class="publication">
+            <p class="pub-meta">2024 / Seminar</p>
+            <h3>Oriented diameter of near planar triangulations</h3>
+            <p>LSU Combinatorics Seminar.</p>
+          </li>
+        </ol>
+      </section>
 
-<section id="publications">
-  <h2>Publications</h2>
-  <div class="card">
-    <ul>
-      <li><strong>Unavoidable cycle-contraction minors of large 2-connected graphs</strong>, with J. Oxley, SIAM J. Discrete Math., to appear (arXiv:2503.20106)</li>
-      <li><strong>On the oriented diameter of near planar triangulations</strong>, with X. Liu, Z. Wang, Discrete Mathematics (2025)</li>
-      <li><strong>The algebraic structure of hyperbolic graph braid groups</strong>, with collaborators, IJAC (2025)</li>
-    </ul>
-  </div>
+      <section class="section teaching" id="teaching" aria-labelledby="teaching-title">
+        <div class="section-heading">
+          <p class="eyebrow">Teaching</p>
+          <h2 id="teaching-title">Teaching</h2>
+        </div>
+        <p class="section-note">Instructor of record, Louisiana State University.</p>
+        <div class="course-list">
+          <div class="course-row">
+            <p class="course-code">Math 1550</p>
+            <div>
+              <h3>Differential and Integral Calculus</h3>
+              <p>Fall 2023, Fall 2025</p>
+            </div>
+          </div>
+          <div class="course-row">
+            <p class="course-code">Math 1020/1021</p>
+            <div>
+              <h3>Corequisite Support and College Algebra</h3>
+              <p>Spring 2024, Fall 2024, Spring 2025</p>
+            </div>
+          </div>
+          <div class="course-row">
+            <p class="course-code">Math 2065</p>
+            <div>
+              <h3>Elementary Differential Equations</h3>
+              <p>Summer 2023</p>
+            </div>
+          </div>
+          <div class="course-row">
+            <p class="course-code">Math 1021</p>
+            <div>
+              <h3>College Algebra</h3>
+              <p>Fall 2022</p>
+            </div>
+          </div>
+          <div class="course-row">
+            <p class="course-code">Math 1552</p>
+            <div>
+              <h3>Analytic Geometry and Calculus II</h3>
+              <p>Summer 2022</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <h2>Preprints</h2>
-  <div class="card">
-    <ul>
-      <li><strong>Super-minimally 3-connected matroids</strong>, with J. Oxley (arXiv:2603.11318)</li>
-      <li><strong>Reconstruction of C4-free graphs from closed neighborhoods</strong> (arXiv:2510.21195)</li>
-      <li><strong>Super-minimally 3-connected graphs</strong> (arXiv:2510.06392)</li>
-      <li><strong>Rainbow triangles and the Erdős–Hajnal problem</strong> (arXiv:2505.13781)</li>
-    </ul>
-  </div>
-</section>
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Contact</h2>
+          <p>For full details, see my CV.</p>
+        </div>
+        <div class="contact-links">
+          <a class="email-link" href="#" data-user="waynege96" data-domain="gmail.com">Personal email</a>
+          <a class="email-link" href="#" data-user="yge4" data-domain="lsu.edu">LSU email</a>
+          <a href="Ge_CV.pdf">CV</a>
+          <a href="https://scholar.google.com/citations?user=kaPVcIAAAAAJ&hl=en">Google Scholar</a>
+          <a href="https://orcid.org/0009-0005-6495-0894">ORCID</a>
+        </div>
+      </section>
+    </main>
 
-<section id="talks">
-  <h2>Talks</h2>
-  <div class="card">
-    <ul>
-      <li>AMS Southeastern Sectional Meeting (2025)</li>
-      <li>CombinaTexas (2024)</li>
-      <li>LSU Combinatorics Seminar (multiple years)</li>
-    </ul>
-  </div>
+    <footer class="site-footer">
+      <p>Copyright <span id="year"></span> Yiwei (Wayne) Ge. Last updated May 2026.</p>
+    </footer>
 
-  <h2>Workshops</h2>
-  <div class="card">
-    <ul>
-      <li>SiMEGG (2026)</li>
-      <li>GRWC (2024)</li>
-      <li>Workshop on (Mostly) Matroids (2024)</li>
-    </ul>
-  </div>
-</section>
-
-<section id="teaching">
-  <h2>Teaching</h2>
-  <div class="card">
-    <ul>
-      <li>Calculus I (Math 1550)</li>
-      <li>Calculus II (Math 1552)</li>
-      <li>Differential Equations (Math 2065)</li>
-      <li>College Algebra (Math 1021)</li>
-    </ul>
-  </div>
-
-  <h2>Awards</h2>
-  <div class="card">
-    <ul>
-      <li>Bogdan Oporowski Prize (2025)</li>
-      <li>Certificate of Teaching Excellence (2024)</li>
-    </ul>
-  </div>
-</section>
-
-<section id="service">
-  <h2>Service</h2>
-  <div class="card">
-    <ul>
-      <li>Referee, Graphs and Combinatorics</li>
-      <li>Co-organizer, LSU Combinatorics Seminar</li>
-      <li>Directed Reading Program mentor</li>
-    </ul>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    <p>Email: <a href="mailto:yge4@lsu.edu">yge4@lsu.edu</a></p>
-    <p>Mathematics Department<br>
-    Louisiana State University<br>
-    Baton Rouge, LA</p>
-  </div>
-</section>
-
-</main>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
