@@ -203,6 +203,10 @@ h3 {
   gap: 34px;
 }
 
+.intro-grid {
+  display: block;
+}
+
 .intro-grid p,
 .contact p {
   max-width: 720px;
