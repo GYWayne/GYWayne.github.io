@@ -1,6 +1,6 @@
 const year = document.querySelector("#year");
 const filters = document.querySelectorAll(".filter");
-const publications = document.querySelectorAll(".publication");
+const publications = document.querySelectorAll("#publications .publication");
 const emailLinks = document.querySelectorAll(".email-link");
 
 year.textContent = new Date().getFullYear();

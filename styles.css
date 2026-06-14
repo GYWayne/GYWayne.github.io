@@ -106,7 +106,7 @@ main {
 }
 
 .hero-copy {
-  max-width: 680px;
+  max-width: 720px;
 }
 
 .eyebrow {
@@ -145,10 +145,15 @@ h3 {
 }
 
 .lead {
-  max-width: 640px;
-  margin: 16px 0 0;
+  max-width: 700px;
+  margin: 18px 0 0;
   color: var(--muted);
-  font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+  font-size: clamp(1.02rem, 1.45vw, 1.18rem);
+  line-height: 1.7;
+}
+
+.lead a {
+  font-weight: 600;
 }
 
 .hero-actions {
@@ -196,20 +201,15 @@ h3 {
   border-top: 1px solid var(--line);
 }
 
-.intro-grid,
 .contact {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
   gap: 34px;
 }
 
-.intro-grid {
-  display: block;
-}
-
-.intro-grid p,
+.about p,
 .contact p {
-  max-width: 720px;
+  max-width: 100%;
   margin: 12px 0 0;
   color: var(--muted);
   font-size: 1.04rem;
@@ -347,7 +347,8 @@ dt,
   list-style: none;
 }
 
-.publication {
+.publication,
+.talk-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 8px 24px;
@@ -359,25 +360,44 @@ dt,
   padding: 12px 0;
 }
 
-.publication:last-child {
+.publication:last-child,
+.talk-row:last-child {
   border-bottom: 1px solid var(--line);
 }
 
 .publication h3,
-.publication p {
+.publication p,
+.talk-row h3,
+.talk-row p {
   grid-column: 1;
 }
 
-.publication p {
+.publication p,
+.talk-row p {
   margin: 0;
   color: var(--muted);
 }
 
-.publication a {
+.publication a,
+.talk-row a {
   grid-column: 2;
   grid-row: 1 / span 3;
   align-self: center;
   font-weight: 700;
+}
+
+.publication-links {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  display: flex;
+  gap: 12px;
+  align-self: center;
+  font-weight: 700;
+}
+
+.publication-links a {
+  grid-column: auto;
+  grid-row: auto;
 }
 
 .publication.is-hidden {
@@ -420,7 +440,6 @@ dt,
 @media (max-width: 820px) {
   .site-header,
   .section-heading,
-  .intro-grid,
   .contact {
     display: block;
   }
@@ -478,11 +497,18 @@ dt,
   }
 
   .quick-info div,
-  .publication {
+  .publication,
+  .talk-row {
     grid-template-columns: 1fr;
   }
 
-  .publication a {
+  .publication a,
+  .talk-row a {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .publication-links {
     grid-column: 1;
     grid-row: auto;
   }
