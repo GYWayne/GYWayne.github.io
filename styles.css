@@ -285,6 +285,17 @@ h3 {
   border-top: 1px solid var(--line);
 }
 
+.list-title {
+  margin: 28px 0 12px;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 650;
+}
+
+.section-heading + .list-title {
+  margin-top: 0;
+}
+
 .publication,
 .talk-row {
   display: grid;
@@ -389,14 +400,7 @@ h3 {
 }
 
 .contact-heading {
-  align-items: flex-end;
   margin-bottom: 22px;
-}
-
-.contact-heading > p {
-  max-width: 360px;
-  margin: 0;
-  color: var(--muted);
 }
 
 .contact-links {
@@ -409,6 +413,12 @@ h3 {
 
 .contact-links a {
   font-weight: 700;
+}
+
+.contact-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .site-footer {
@@ -474,10 +484,6 @@ h3 {
   .filters {
     justify-content: flex-start;
     margin-top: 16px;
-  }
-
-  .contact-heading > p {
-    margin-top: 12px;
   }
 
   .publication,
