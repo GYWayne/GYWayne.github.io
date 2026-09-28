@@ -296,6 +296,10 @@ h3 {
   margin-top: 0;
 }
 
+.publication-list + .list-title {
+  margin-top: 46px;
+}
+
 .publication,
 .talk-row {
   display: grid;
