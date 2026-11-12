@@ -41,7 +41,8 @@ a:hover {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+.publication-note > summary:focus-visible {
   outline: 3px solid var(--gold);
   outline-offset: 3px;
 }
@@ -314,10 +315,32 @@ h3 {
 }
 
 .publication p:not(.pub-meta),
-.talk-row p:not(.pub-meta) {
+.talk-row p:not(.pub-meta),
+.publication-note {
   grid-area: details;
   margin: 0;
   color: var(--muted);
+}
+
+.publication-note > summary {
+  width: fit-content;
+  cursor: pointer;
+  list-style: none;
+}
+
+.publication-note > summary::-webkit-details-marker {
+  display: none;
+}
+
+.publication-note sup {
+  margin-left: 2px;
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 0;
+}
+
+.publication-note[open] > p {
+  margin-top: 8px;
 }
 
 .publication > a,
